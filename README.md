@@ -1,74 +1,48 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Client Gateway Microservice
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Microservice to handle the communication between our clients (meaning web applications, mobile, etc.) who will reach the Gateway (RESTful api) and the Gateway is the one who will send the request to the respective microservice.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Using as transport RESTful api.
 
-## Description
+## Develop Mode
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+1. Clone repository
+2. Install dependencies with the command `npm install` or `npm i` on your terminal
+3. Create an `.env` file based on `.env.template`
+4. Then execute the command `npm run start:dev` on your terminal to run the server in development mode
+5. This Client Gateway Microservice is running on port `3000`
 
-## Installation
+## INFORMATION MICROSERVICES-NESTJS
 
-```bash
-$ npm install
-```
+Creation of a distributed system using multiple databases, transporters and techniques to independently scale each microservice. Following the best practices on hot to configure, connect and scale them.
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
-# client-gateway-microservice
+1. Microservices Architecture
+2. Nest JS as backend
+3. Communication by messages and events
+4. Message Patterns
+5. CRUDs
+6. Communication between Microservices
+7. Multiple databases as PostreSQL, Mongo, SQLite (several microservices have different type of databases)
+8. Gateways
+9. Exception Handling
+10. Prisma, Prisma Models and Relationships
+11. Filters and Pages
+12. Dockerization
+13. Kubernetes
+14. Deployed in Google Cloud
+15. Google Kubernetes Engine (GKE)
+16. Private records for artifacts in GCloud
+17. CI/CD - Github Copilot and Jenkins(Training)
+18. Payments with Stripe
+19. Webhooks
+20. Proxys
+21. Handling of environment variables (.env)
+22. Secrets
+23. Auth (Login)
+24. NATS Server
+25. Transporters such as TCP, HTTP, gRPC
+26. Postman
+27. Third Party API Integration: Rest
+28. Swagger Documentation
+29. Git sub modules and Git Organizations
+30. Auth, Gateway, Products, Orders, Order Details, Payments Microservices
