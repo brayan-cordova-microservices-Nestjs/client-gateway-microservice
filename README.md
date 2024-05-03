@@ -2,7 +2,7 @@
 
 Microservice to handle the communication between our clients (meaning web applications, mobile, etc.) who will reach the Gateway (RESTful api) and the Gateway is the one who will send the request to the respective microservice.
 
-Using as transport RESTful api.
+Using as transport RESTful api and TCP.
 
 ## Develop Mode
 

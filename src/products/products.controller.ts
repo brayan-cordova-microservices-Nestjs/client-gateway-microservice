@@ -7,7 +7,6 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { string } from 'joi';
 
 @Controller('products')
 export class ProductsController {
