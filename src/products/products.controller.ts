@@ -3,14 +3,19 @@ import {
   Controller,
   Delete,
   Get,
+  Inject,
   Param,
   Patch,
   Post,
 } from '@nestjs/common';
+import { ClientProxy } from '@nestjs/microservices';
+import { PRODUCTS_SERVICE } from 'src/config';
 
 @Controller('products')
 export class ProductsController {
-  constructor() {}
+  constructor(
+    @Inject(PRODUCTS_SERVICE) private readonly productsClient: ClientProxy,
+  ) {}
 
   // create a product
   @Post()
@@ -21,7 +26,7 @@ export class ProductsController {
   // find All products
   @Get()
   findAllProducts() {
-    return 'This action return all products';
+    return this.productsClient.send({ cmd: 'find_all_products' }, {}); // empty object {} = @Payload
   }
 
   // find One product by ID
