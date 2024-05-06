@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { envs } from './config';
+import { RpcCustomExceptionFilter } from './common';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const colors = require('colors');
@@ -22,6 +23,9 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
     }),
   );
+
+  // RPC Custom Exception Filter
+  app.useGlobalFilters(new RpcCustomExceptionFilter());
 
   await app.listen(envs.port);
 
