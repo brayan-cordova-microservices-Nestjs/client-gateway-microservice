@@ -25,7 +25,7 @@ export class ProductsController {
 
   // create a product
   @Post()
-  createProduct(@Body() createProductDto: CreateProductDto) {
+  create(@Body() createProductDto: CreateProductDto) {
     return this.productsClient.send(
       { cmd: 'create_product' },
       createProductDto,
@@ -34,7 +34,7 @@ export class ProductsController {
 
   // find All products
   @Get()
-  findAllProducts(@Query() paginationDto: PaginationDto) {
+  findAll(@Query() paginationDto: PaginationDto) {
     return this.productsClient.send(
       { cmd: 'find_all_products' },
       paginationDto,
@@ -43,7 +43,7 @@ export class ProductsController {
 
   // find One product by ID
   @Get(':id')
-  async findOneProduct(@Param('id') id: string) {
+  async findOne(@Param('id') id: string) {
     return this.productsClient.send({ cmd: 'find_one_product' }, { id }).pipe(
       catchError((err) => {
         throw new RpcException(err);
@@ -68,7 +68,7 @@ export class ProductsController {
 
   // update product (PATCH)
   @Patch(':id')
-  updateProduct(
+  update(
     @Param('id', ParseIntPipe) id: number,
     @Body() updateProductDto: UpdateProductDto,
   ) {
@@ -89,7 +89,7 @@ export class ProductsController {
 
   // delete product (SOFT DELETE)
   @Delete(':id')
-  deleteProduct(@Param('id') id: string) {
+  delete(@Param('id') id: string) {
     return this.productsClient.send({ cmd: 'delete_product' }, { id }).pipe(
       catchError((error) => {
         throw new RpcException(error);
