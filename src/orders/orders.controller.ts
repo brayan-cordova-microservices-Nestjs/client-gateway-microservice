@@ -18,13 +18,13 @@ export class OrdersController {
 
   // find All orders
   @Get()
-  findAll() {
+  findAllOrders() {
     return this.ordersClient.send({ cmd: 'find_all_orders' }, {});
   }
 
   // find One order by ID
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOneOrder(@Param('id') id: string) {
     return this.ordersClient.send({ cmd: 'find_one_order' }, { id });
   }
 }
