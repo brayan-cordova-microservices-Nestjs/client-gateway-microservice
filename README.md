@@ -9,14 +9,9 @@ Using as transport RESTful api and TCP.
 1. Clone repository
 2. Install dependencies with the command `npm install` or `npm i` on your terminal
 3. Create an `.env` file based on `.env.template`
-4. Then execute the command `npm run start:dev` on your terminal to run the server in development mode
-5. This Client Gateway Microservice is running on port `3000`
-
-## NATS
-
-```
-docker run -d --name nats-server -p 4222:4222 -p 8222:8222 nats
-```
+4. NATS server up `docker run -d --name nats-server -p 4222:4222 -p 8222:8222 nats`
+5. Then execute the command `npm run start:dev` on your terminal to run the server in development mode
+6. This Client Gateway Microservice is running on port `3000`
 
 ## INFORMATION MICROSERVICES-NESTJS
 
