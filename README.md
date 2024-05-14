@@ -12,6 +12,12 @@ Using as transport RESTful api and TCP.
 4. Then execute the command `npm run start:dev` on your terminal to run the server in development mode
 5. This Client Gateway Microservice is running on port `3000`
 
+## NATS
+
+```
+docker run -d --name nats-server -p 4222:4222 -p 8222:8222 nats
+```
+
 ## INFORMATION MICROSERVICES-NESTJS
 
 Creation of a distributed system using multiple databases, transporters and techniques to independently scale each microservice. Following the best practices on hot to configure, connect and scale them.
