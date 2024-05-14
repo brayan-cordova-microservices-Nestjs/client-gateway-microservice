@@ -3,6 +3,8 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
 import { envs, NATS_SERVICE } from 'src/config';
 
 @Module({
+  controllers: [],
+  providers: [],
   imports: [
     ClientsModule.register([
       {
